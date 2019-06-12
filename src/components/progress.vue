@@ -10,7 +10,7 @@
         ]">
     <div class="vm-progress-bar" v-if="type === 'line'">
       <div class="vm-progress-bar__outer" :style="{ height: strokeWidth + 'px', backgroundColor: trackColor }">
-        <div class="vm-progress-bar__inner" :class="[{'vm-progress-bar__striped': striped}, linearClassName]" :style="{ width: percentage + '%', background: strokeColor}">
+        <div class="vm-progress-bar__inner" :class="[{'vm-progress-bar__striped': striped}, linearClassName]" :style="{ width: percentage + '%', backgroundColor: strokeColor}">
           <!-- <div class="vm-progress-bar__innerText" v-if="showText && textInside"><slot>{{percentage}}%</slot></div> -->
           <div class="vm-progress-bar__innerText" v-if="showText && textInside">
             <slot name="content"></slot>
