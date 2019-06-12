@@ -187,5 +187,5 @@
 </script>
 
 <style lang="less">
-@import url('../styles/less/index');
+@import "../styles/less/index.less";
 </style>
