@@ -11,18 +11,21 @@
     <div class="vm-progress-bar" v-if="type === 'line'">
       <div class="vm-progress-bar__outer" :style="{ height: strokeWidth + 'px', backgroundColor: trackColor }">
         <div class="vm-progress-bar__inner" :class="[{'vm-progress-bar__striped': striped}, linearClassName]" :style="barStyle">
-          <div class="vm-progress-bar__innerText" v-if="showText && textInside"><slot>{{percentage}}%</slot></div>
+          <!-- <div class="vm-progress-bar__innerText" v-if="showText && textInside"><slot>{{percentage}}%</slot></div> -->
+          <div class="vm-progress-bar__innerText" v-if="showText && textInside">
+            <slot></slot>
+          </div>
         </div>
       </div>
     </div>
-    <div class="vm-progress-circle" :style="{height: width + 'px', width: width + 'px'}" v-else>
+    <!-- <div class="vm-progress-circle" :style="{height: width + 'px', width: width + 'px'}" v-else>
       <svg viewBox="0 0 100 100">
         <path class="vm-progress-circle__track" :d="trackPath" :stroke="trackColor" :stroke-width="relativeStrokeWidth"
               fill="none"></path>
         <path class="vm-progress-circle__path" :d="trackPath" :stroke-linecap="strokeLinecap" :stroke="stroke"
               :stroke-width="relativeStrokeWidth" fill="none" :style="circlePathStyle"></path>
       </svg>
-    </div>
+    </div> -->
     <div class="vm-progress__text"
          v-if="showText && !textInside"
          ref="progressText"
